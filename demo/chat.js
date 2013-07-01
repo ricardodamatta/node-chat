@@ -6,7 +6,7 @@ var sys = require("sys"),
 
 // create chat server
 var chatServer = chat.createServer();
-chatServer.listen(8001);
+chatServer.listen(process.env.PORT || 8001, process.env.IP || '127.0.0.1');
 
 // create a channel and log all activity to stdout
 chatServer.addChannel({
